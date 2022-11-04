@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22046"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 10:51:47 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA0NjsyMDIyMjNNQVlDMDA4MzsyMDIyLTExLTA0OzA5OjI1OjE4IEFNOzMwNjg="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA0NjsyMDIyMjNNQVlDMDA4MzsyMDIyLTExLTA0OzEwOjUxOjQ3IEFNOzQ7MzE3Mg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="here, declarition of variables is done"/>
+            <declare name="b, a, c, res1, res2" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter the coefficient for x^2&quot;" newline="True"/>
+            <input variable="a"/>
+            <output expression="&quot;enter the coefficient for x&quot;" newline="True"/>
+            <input variable="b"/>
+            <output expression="&quot;enter the constant&quot;" newline="True"/>
+            <input variable="c"/>
+            <comment text="here 2 roots are caliculated seperatoly one function for plus and one is for negative&#13;&#10;"/>
+            <assign variable="res1" expression="(-b+SQRT(b*b-4*a*c))/2*a"/>
+            <assign variable="res2" expression="(-b-SQRT(b*b-4*a*c))/2*a"/>
+            <output expression="&quot;one root of the equation is &quot;&amp;res1&amp;&quot; the other root of the equation is &quot;&amp;res2" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

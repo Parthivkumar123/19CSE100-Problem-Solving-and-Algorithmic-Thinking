@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22046"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 10:49:49 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA0NjsyMDIyMjNNQVlDMDA4MzsyMDIyLTExLTA0OzEwOjEwOjUxIEFNOzMwNTE="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA0NjsyMDIyMjNNQVlDMDA4MzsyMDIyLTExLTA0OzEwOjQ5OjQ5IEFNOzM7MzE4MA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="to swap two values without using third variable"/>
+            <declare name="a, b" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter the first number&quot;" newline="True"/>
+            <input variable="a"/>
+            <output expression="&quot;enter the second number&quot;" newline="True"/>
+            <input variable="b"/>
+            <assign variable="a" expression="a+b"/>
+            <comment text="a becomes the sumj of a and b"/>
+            <assign variable="b" expression="a-b"/>
+            <comment text="b becoms the difference from total (a) and the imputed value b"/>
+            <assign variable="a" expression="a-b"/>
+            <comment text="here, again a becomes the difference between a and b hence , the value of a becomes b and value of b becomes a"/>
+            <output expression="&quot;first value is &quot;&amp;a" newline="True"/>
+            <output expression="&quot;second value is &quot;&amp;b" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22046"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 11:01:36 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA0NjsyMDIyMjNNQVlDMDA4MzsyMDIyLTExLTA0OzA5OjA2OjQ4IEFNOzMwNzA="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA0NjsyMDIyMjNNQVlDMDA4MzsyMDIyLTExLTA0OzExOjAxOjM2IEFNOzQ7MzE2Ng=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="celicus to farenheat and farenheat to celicius conversion to be done here"/>
+            <comment text="decleration of variables"/>
+            <declare name="fht, cel" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter the celicus temperature&quot;" newline="True"/>
+            <comment text="imput for the celicus value"/>
+            <input variable="cel"/>
+            <comment text="conversion of celicius to forenheat"/>
+            <assign variable="fht" expression="(9/5*cel)+32"/>
+            <output expression="&quot;the temperature in forenheat is&quot;&amp;fht" newline="True"/>
+            <output expression="&quot;now lets convert from celicus to farenheat&quot;" newline="True"/>
+            <declare name="cel2, far2" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter the temperature in farenheat&quot;" newline="True"/>
+            <input variable="far2"/>
+            <assign variable="cel2" expression="(far2-32)*5/9"/>
+            <output expression="&quot;temperature in celicus is&quot;&amp;cel2" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
