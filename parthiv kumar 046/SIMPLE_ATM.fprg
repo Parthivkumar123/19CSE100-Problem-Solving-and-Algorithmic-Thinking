@@ -1,0 +1,184 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22046"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-18 11:03:37 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA0NjsyMDIyMjNNQVlDMDA4MzsyMDIyLTExLTE4OzA5OjAyOjA0IEFNOzMwNjM="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA0NjsyMDIyMjNNQVlDMDA4MzsyMDIyLTExLTE4OzExOjAzOjM3IEFNOzM7MzE3Mw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="thi programme isa simple atm trancission capible for 1 tranction"/>
+            <declare name="accno, bal, res, pin, withdraw, con, options, accno1, pin1, balmin" type="Integer" array="False" size=""/>
+            <declare name="name" type="String" array="False" size=""/>
+            <assign variable="balmin" expression="500"/>
+            <assign variable="bal" expression="10000"/>
+            <assign variable="accno1" expression="111122223333"/>
+            <assign variable="pin1" expression="8520"/>
+            <output expression="&quot;welcome to the bank of coimbatore&quot;" newline="True"/>
+            <output expression="&quot;press 1 to withdraw money&quot;" newline="True"/>
+            <output expression="&quot;press 2 to check the balance&quot;" newline="True"/>
+            <output expression="&quot;press 3 to change the pin&quot;" newline="True"/>
+            <output expression="&quot;press 4 to deposit money&quot;" newline="True"/>
+            <input variable="options"/>
+            <if expression="options==1">
+                <then>
+                    <comment text="this if condetion is for withdrawl of MONEY"/>
+                    <output expression="&quot;enter your account number&quot;" newline="True"/>
+                    <input variable="accno"/>
+                    <if expression="accno==accno1">
+                        <then>
+                            <output expression="&quot;enter your name&quot;" newline="True"/>
+                            <input variable="name"/>
+                            <output expression="&quot;hi &quot;&amp;name&amp;&quot; here you go with your account details&quot;" newline="True"/>
+                            <output expression="&quot;your account number is &quot;&amp;accno" newline="True"/>
+                            <output expression="&quot;your balance is&quot;&amp;bal" newline="True"/>
+                            <output expression="&quot;please enter the amount you want to withdraw&quot;" newline="True"/>
+                            <input variable="withdraw"/>
+                            <if expression="withdraw&lt;bal">
+                                <then>
+                                    <output expression="&quot;enter your pin number&quot;" newline="True"/>
+                                    <input variable="pin"/>
+                                    <if expression="pin==pin1">
+                                        <then>
+                                            <output expression="&quot;money withdrawl successful&quot;" newline="True"/>
+                                            <assign variable="res" expression="bal-withdraw"/>
+                                            <output expression="&quot;your remaining balance is&quot;&amp;res" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;!!INCORRECT PIN&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <comment text="to avoid negative output.."/>
+                                    <output expression="&quot;insufficient balance&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <output expression="&quot;!!...INCORRECT ACCOUNT NUMBER...!! PLEASE RECHECK THE ACCOUNT NUMBER&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="options==2">
+                        <then>
+                            <comment text="THIS IS TO CHECK BALANCE"/>
+                            <output expression="&quot;enter your account number&quot;" newline="True"/>
+                            <input variable="accno"/>
+                            <if expression="accno==accno1">
+                                <then>
+                                    <output expression="&quot;plese enter the pin&quot;" newline="True"/>
+                                    <input variable="pin"/>
+                                    <if expression="pin==pin1">
+                                        <then>
+                                            <output expression="&quot;your balance is&quot;&amp;bal" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;!!INCORRECT PIN&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <output expression="&quot;wrong account number&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <if expression="options==3">
+                                <then>
+                                    <comment text="THIUS LOOP IS TO CHANGE PIN"/>
+                                    <output expression="&quot;enter your account number&quot;" newline="True"/>
+                                    <input variable="accno"/>
+                                    <if expression="accno==accno1">
+                                        <then>
+                                            <output expression="&quot;plese enter your old pin&quot;" newline="True"/>
+                                            <input variable="pin"/>
+                                            <if expression="pin==pin1">
+                                                <then>
+                                                    <declare name="newpin" type="Integer" array="False" size=""/>
+                                                    <output expression="&quot;enter the neew pin&quot;" newline="True"/>
+                                                    <input variable="newpin"/>
+                                                    <output expression="&quot;pin has been changed successfully&quot;" newline="True"/>
+                                                    <output expression="&quot;input your accoun t number&quot;" newline="True"/>
+                                                    <input variable="accno"/>
+                                                    <if expression="accno==accno1">
+                                                        <then>
+                                                            <output expression="&quot;enter your name&quot;" newline="True"/>
+                                                            <input variable="name"/>
+                                                            <output expression="&quot;hi &quot;&amp;name&amp;&quot; here you go with your account details&quot;" newline="True"/>
+                                                            <output expression="&quot;your account number is &quot;&amp;accno" newline="True"/>
+                                                            <output expression="&quot;your balance is&quot;&amp;bal" newline="True"/>
+                                                            <output expression="&quot;please enter the amount you want to withdraw&quot;" newline="True"/>
+                                                            <input variable="withdraw"/>
+                                                            <if expression="withdraw&lt;bal">
+                                                                <then>
+                                                                    <output expression="&quot;enter your pin number&quot;" newline="True"/>
+                                                                    <input variable="pin"/>
+                                                                    <if expression="pin==newpin">
+                                                                        <then>
+                                                                            <output expression="&quot;money withdrawl successful&quot;" newline="True"/>
+                                                                            <assign variable="res" expression="bal-withdraw"/>
+                                                                            <output expression="&quot;your remaining balance is&quot;&amp;res" newline="True"/>
+                                                                        </then>
+                                                                        <else>
+                                                                            <output expression="&quot;!!INCORRECT PIN&quot;" newline="True"/>
+                                                                        </else>
+                                                                    </if>
+                                                                </then>
+                                                                <else>
+                                                                    <comment text="to avoid negative output.."/>
+                                                                    <output expression="&quot;insufficient balance&quot;" newline="True"/>
+                                                                </else>
+                                                            </if>
+                                                        </then>
+                                                        <else>
+                                                            <output expression="&quot;!!...INCORRECT ACCOUNT NUMBER...!! PLEASE RECHECK THE ACCOUNT NUMBER&quot;" newline="True"/>
+                                                        </else>
+                                                    </if>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;incorrect pin&quot;" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;wrong account number&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <if expression="options==4">
+                                        <then>
+                                            <comment text="THIS IF CONDETION IS TO DEPOSIT MONEY"/>
+                                            <output expression="&quot;enter your account number&quot;" newline="True"/>
+                                            <input variable="accno"/>
+                                            <if expression="accno==accno1">
+                                                <then>
+                                                    <output expression="&quot;plese enter the pin&quot;" newline="True"/>
+                                                    <input variable="pin"/>
+                                                    <if expression="pin==pin1">
+                                                        <then/>
+                                                        <else/>
+                                                    </if>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;wrong account number&quot;" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

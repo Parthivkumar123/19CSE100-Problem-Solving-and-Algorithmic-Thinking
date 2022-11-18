@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22046"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-18 09:45:28 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA0NjsyMDIyMjNNQVlDMDA4MzsyMDIyLTExLTE4OzA5OjAyOjA0IEFNOzMwNjM="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA0NjsyMDIyMjNNQVlDMDA4MzsyMDIyLTExLTE4OzA5OjQ1OjI4IEFNOzE7MzE4NA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="thi programme isa simple atm trancission capible for 1 tranction"/>
+            <declare name="accno, bal, res, pin, withdraw, con" type="Integer" array="False" size=""/>
+            <declare name="name" type="String" array="False" size=""/>
+            <output expression="&quot;enter your account number&quot;" newline="True"/>
+            <input variable="accno"/>
+            <if expression="accno==111122223333">
+                <then>
+                    <output expression="&quot;enter your name&quot;" newline="True"/>
+                    <input variable="name"/>
+                    <output expression="&quot;enter your previous balance&quot;" newline="True"/>
+                    <input variable="bal"/>
+                    <output expression="&quot;hi &quot;&amp;name&amp;&quot; here you go with your account details&quot;" newline="True"/>
+                    <output expression="&quot;your account number is &quot;&amp;accno" newline="True"/>
+                    <output expression="&quot;your balance is&quot;&amp;bal" newline="True"/>
+                    <output expression="&quot;please enter the amount you want to withdraw&quot;" newline="True"/>
+                    <input variable="withdraw"/>
+                    <if expression="bal&gt;500">
+                        <then>
+                            <output expression="&quot;enter your pin number&quot;" newline="True"/>
+                            <input variable="pin"/>
+                            <if expression="pin==8520">
+                                <then>
+                                    <output expression="&quot;money withdrawl successful&quot;" newline="True"/>
+                                    <assign variable="res" expression="bal-withdraw"/>
+                                    <output expression="&quot;your remaining balance is&quot;&amp;res" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;!!INCORRECT PIN&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <comment text="to avoid negative output.."/>
+                            <if expression="bal&gt;0">
+                                <then>
+                                    <output expression="&quot;ALERT!!!!!   its ok to withdraw the amount but delay of redepositing may lead to charge fines as per the condetions of bank authourity&quot;" newline="True"/>
+                                    <output expression="&quot;press 1 to continue the withdrawl process&quot;" newline="True"/>
+                                    <comment text="THIS CON IS CONFORMATION VARIABLE ..... IT IS DECLARED TO CONFORM WHETHER THE USER IS READY TO WITHDRAW MONEY AFTER READING THE ALERT NOTE"/>
+                                    <input variable="con"/>
+                                    <if expression="con==1">
+                                        <then>
+                                            <output expression="&quot;enter your pin number&quot;" newline="True"/>
+                                            <input variable="pin"/>
+                                            <if expression="pin==8520">
+                                                <then>
+                                                    <output expression="&quot;money withdrawl successful&quot;" newline="True"/>
+                                                    <assign variable="res" expression="bal-withdraw"/>
+                                                    <output expression="&quot;your remaining balance is&quot;&amp;res" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;!!INCORRECT PIN&quot;" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;THANKYOU FOR THE CONCERN......&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <output expression="&quot;please chack your balancee&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;!!...INCORRECT ACCOUNT NUMBER...!! PLEASE RECHECK THE ACCOUNT NUMBER&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
