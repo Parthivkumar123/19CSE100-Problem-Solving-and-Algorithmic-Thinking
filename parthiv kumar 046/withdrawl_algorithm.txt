@@ -1,0 +1,45 @@
+start
+   
+    Declare Integer accno, bal, res, pin, withdraw, con
+    Declare String name
+    
+    read account number
+    If accno==111122223333
+        read name
+        read balance
+        read the ampont to withdraw
+        If bal>500
+            read pin
+            If pin==8520
+                
+                Assign res = bal-withdraw
+                print the final balance
+            Else
+                Output "!!INCORRECT PIN"
+            End
+        Else
+            
+            
+            If bal>0
+                print the elert statement
+                read the confermation
+                If con==1
+                   read pin
+                    If pin==8520
+                        
+                        Assign res = bal-withdraw
+                        print the reamining balance
+                    Else
+                       print incorrect pin
+                    End
+                Else
+                    print thank you
+                End
+            Else
+                print pelase check your balance
+            End
+        End
+    Else
+        print incorrect account number
+    End
+End
