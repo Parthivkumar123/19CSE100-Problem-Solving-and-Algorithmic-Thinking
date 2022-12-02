@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22046"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 09:55:26 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA0NjsyMDIyMjNNQVlDMDA4MzsyMDIyLTEyLTAyOzA5OjUyOjM2IEFNOzMwNjc="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA0NjsyMDIyMjNNQVlDMDA4MzsyMDIyLTEyLTAyOzA5OjUyOjM5IEFNOzE7Q0IuRU4uVTRDWVMyMjA0NjsyMDIyMjNNQVlDMDA4MzsyMDIyLTEyLTAyOzA5OjMxOjM4IEFNO2FkZGl0aW9uX3RhYmxlX2Zvcl9maXJzdF8xMF9udW1iZXJzLmZwcmc7MTA0MTg="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA0NjsyMDIyMjNNQVlDMDA4MzsyMDIyLTEyLTAyOzA5OjU1OjI2IEFNOzM7MzE3OQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="multiplication table"/>
+            <comment text="c1 is counter 1"/>
+            <comment text="c2 is counter 2"/>
+            <declare name="c1, c2, mul" type="Integer" array="False" size=""/>
+            <for variable="c1" start="1" end="10" direction="inc" step="1">
+                <for variable="c2" start="1" end="10" direction="inc" step="1">
+                    <assign variable="mul" expression="c1*c2"/>
+                    <output expression="c1&amp;&quot;*&quot;&amp;c2&amp;&quot;=&quot;&amp;mul" newline="True"/>
+                </for>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

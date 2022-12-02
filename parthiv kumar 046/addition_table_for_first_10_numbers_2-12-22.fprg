@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22046"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 10:03:22 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA0NjsyMDIyMjNNQVlDMDA4MzsyMDIyLTEyLTAyOzA5OjMxOjM4IEFNOzMwNjY="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA0NjsyMDIyMjNNQVlDMDA4MzsyMDIyLTEyLTAyOzEwOjAzOjIyIEFNOzQ7MzE2MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="addition table"/>
+            <comment text="c1 is main counter and the c2 is another counter which keeps on changing and gets added to c2"/>
+            <declare name="c1, c2, add" type="Integer" array="False" size=""/>
+            <for variable="c1" start="1" end="10" direction="inc" step="1">
+                <for variable="c2" start="1" end="10" direction="inc" step="1">
+                    <assign variable="add" expression="c1+c2"/>
+                    <output expression="c1&amp;&quot;+&quot;&amp;c2&amp;&quot;=&quot;&amp;add" newline="True"/>
+                </for>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

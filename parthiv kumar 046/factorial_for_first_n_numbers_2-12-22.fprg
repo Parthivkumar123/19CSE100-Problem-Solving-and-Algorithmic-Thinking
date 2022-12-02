@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22046"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 09:30:53 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA0NjsyMDIyMjNNQVlDMDA4MzsyMDIyLTEyLTAyOzA5OjExOjQwIEFNOzMwNTc="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA0NjsyMDIyMjNNQVlDMDA4MzsyMDIyLTEyLTAyOzA5OjMwOjUzIEFNOzQ7MzE3Mw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="to find the factorial of first n numbers"/>
+            <comment text="cntr=counter"/>
+            <comment text="ftorl=factorial"/>
+            <comment text="n=input upto what number"/>
+            <declare name="cntr, ftorl, n" type="Integer" array="False" size=""/>
+            <assign variable="ftorl" expression="1"/>
+            <output expression="&quot;enter the numbner upto what you want to factorial of&quot;" newline="True"/>
+            <input variable="n"/>
+            <for variable="cntr" start="1" end="n" direction="inc" step="1">
+                <assign variable="ftorl" expression="ftorl*cntr"/>
+            </for>
+            <output expression="&quot;thye factorial is&quot;&amp;ftorl" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
