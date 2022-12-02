@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="pardu"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 07:14:03 PM"/>
+        <attribute name="created" value="cGFyZHU7UEFSREhVUEM7MjAyMi0xMi0wMjswNjo0MTo0MiBQTTsyNDEx"/>
+        <attribute name="edited" value="cGFyZHU7UEFSREhVUEM7MjAyMi0xMi0wMjswNzoxNDowMyBQTTsxOzI1MTc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="fidonacci process upto n"/>
+            <declare name="a, b, x, c, n" type="Integer" array="False" size=""/>
+            <comment text="x is the counter"/>
+            <output expression="&quot;enter the value&quot;" newline="True"/>
+            <comment text="n is the inputt"/>
+            <input variable="n"/>
+            <assign variable="a" expression="0"/>
+            <assign variable="b" expression="1"/>
+            <assign variable="x" expression="1"/>
+            <while expression="x&lt;=n">
+                <for variable="x" start="1" end="n" direction="inc" step="1">
+                    <assign variable="c" expression="a+b"/>
+                    <output expression="a&amp;&quot;+&quot;&amp;b&amp;&quot;=&quot;&amp;c" newline="True"/>
+                    <assign variable="a" expression="b"/>
+                    <assign variable="b" expression="c"/>
+                </for>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
