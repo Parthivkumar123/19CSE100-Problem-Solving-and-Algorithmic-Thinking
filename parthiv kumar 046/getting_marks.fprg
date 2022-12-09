@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="pardu"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-09 09:29:22 PM"/>
+        <attribute name="created" value="cGFyZHU7UEFSREhVUEM7MjAyMi0xMi0wOTsxMTowMjoxOSBBTTsyNDAw"/>
+        <attribute name="edited" value="cGFyZHU7UEFSREhVUEM7MjAyMi0xMi0wOTswOToyOToyMiBQTTsyOzI1MzQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="get the marks of n members and total and average of the particular person and to print it"/>
+            <declare name="n, roll, varroll, marks, mks, sum, avg" type="Integer" array="False" size=""/>
+            <comment text="n=number of students"/>
+            <comment text="varroll=counter for roll number"/>
+            <output expression="&quot;enter the number of students&quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="rollno" type="Integer" array="True" size="n"/>
+            <declare name="subjects" type="Integer" array="True" size="5"/>
+            <for variable="varroll" start="0" end="n-1" direction="inc" step="1">
+                <output expression="&quot;enter the roll no&quot;" newline="True"/>
+                <input variable="roll"/>
+                <comment text="marks= counter for marks"/>
+                <for variable="marks" start="0" end="4" direction="inc" step="1">
+                    <output expression="&quot;enter the marks&quot;" newline="True"/>
+                    <input variable="mks"/>
+                    <assign variable="subjects[marks]" expression="mks"/>
+                </for>
+                <output expression="&quot;your roll number is&quot;&amp;roll" newline="True"/>
+                <assign variable="sum" expression="subjects[0]+subjects[1]+subjects[2]+subjects[3]+subjects[4]"/>
+                <output expression="&quot;the total of your given marks=&quot;&amp;sum" newline="True"/>
+                <assign variable="avg" expression="(subjects[0]+subjects[1]+subjects[2]+subjects[3]+subjects[4])/5"/>
+                <output expression="&quot;the average of your given marks= &quot;&amp;avg" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

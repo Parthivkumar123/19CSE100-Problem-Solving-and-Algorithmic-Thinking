@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="pardu"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-09 09:53:36 AM"/>
+        <attribute name="created" value="cGFyZHU7UEFSREhVUEM7MjAyMi0xMi0wOTswOToxMjowNyBBTTsyNDA1"/>
+        <attribute name="edited" value="cGFyZHU7UEFSREhVUEM7MjAyMi0xMi0wOTswOTo1MzozNiBBTTszOzI1MjI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="to print the stored arrey values"/>
+            <comment text="vbl=array name"/>
+            <declare name="vbl" type="Integer" array="True" size="10"/>
+            <comment text="inte=varying location of array"/>
+            <declare name="inte, inp" type="Integer" array="False" size=""/>
+            <comment text="inp=input to take from the user and store in the array"/>
+            <for variable="inte" start="0" end="9" direction="inc" step="1">
+                <output expression="&quot;enter the values&quot;" newline="True"/>
+                <input variable="inp"/>
+                <assign variable="vbl[inte]" expression="inp"/>
+            </for>
+            <for variable="inte" start="0" end="9" direction="inc" step="1">
+                <output expression="&quot;the contents of your arrays are&quot;&amp;vbl[inte]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
