@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="lalit"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-27 09:13:15 PM"/>
+        <attribute name="created" value="bGFsaXQ7TEFMSVRIQTsyMDIzLTAxLTI3OzA3OjI2OjIxIFBNOzIzMjQ="/>
+        <attribute name="edited" value="bGFsaXQ7TEFMSVRIQTsyMDIzLTAxLTI3OzA5OjEzOjE1IFBNOzE7MjQzMw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="fact, n" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the number&quot;" newline="True"/>
+            <input variable="n"/>
+            <assign variable="fact" expression="factorial(n)"/>
+            <output expression="n &amp; &quot; factorial is &quot; &amp; fact" newline="True"/>
+        </body>
+    </function>
+    <function name="factorial" type="Integer" variable="fact">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="fact" type="Integer" array="False" size=""/>
+            <if expression="n=1">
+                <then>
+                    <assign variable="fact" expression="1"/>
+                </then>
+                <else>
+                    <assign variable="fact" expression="factorial(n-1)*n"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

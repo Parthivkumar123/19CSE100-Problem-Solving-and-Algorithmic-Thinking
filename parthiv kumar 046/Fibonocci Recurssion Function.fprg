@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="lalit"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-27 10:42:35 PM"/>
+        <attribute name="created" value="bGFsaXQ7TEFMSVRIQTsyMDIyLTEyLTAzOzA3OjI5OjQ2IEFNOzIzMTQ="/>
+        <attribute name="edited" value="Uy5SQU1FU0g7REVTS1RPUC1ISlBPMTBLOzIwMjMtMDEtMDc7MTI6MjA6MDcgUE07NjszMDIx"/>
+        <attribute name="edited" value="bGFsaXQ7TEFMSVRIQTsyMDIzLTAxLTI3OzEwOjQyOjM1IFBNOzI7MjQzMA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, n1, n2" type="Integer" array="False" size=""/>
+            <assign variable="n1" expression="0"/>
+            <assign variable="n2" expression="1"/>
+            <output expression="&quot;Enter n(the number of digits you want fibonocci series of)&quot;" newline="True"/>
+            <input variable="n"/>
+            <call expression="Fibonocci(n,n1,n2)"/>
+        </body>
+    </function>
+    <function name="Fibonocci" type="None" variable="">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+            <parameter name="n1" type="Integer" array="False"/>
+            <parameter name="n2" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="n3" type="Integer" array="False" size=""/>
+            <if expression="n&gt;0">
+                <then>
+                    <output expression="n1" newline="True"/>
+                    <assign variable="n3" expression="n1+n2"/>
+                    <assign variable="n1" expression="n2"/>
+                    <assign variable="n2" expression="n3"/>
+                    <assign variable="n" expression="n-1"/>
+                    <call expression="Fibonocci(n,n1,n2)"/>
+                </then>
+                <else>
+                    <output expression="&quot;Please enter valid value for n&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
